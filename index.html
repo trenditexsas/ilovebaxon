@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ilovebaxon</title>
+
+  <meta name="description" content="Perfil de ilovebaxon.">
+  <meta name="theme-color" content="#030a06">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ilovebaxon">
+  <meta property="og:description" content="Perfil de ilovebaxon.">
+  <meta property="og:url" content="https://ilovebaxon.github.io/REPO/">
+  <meta property="og:image" content="https://ilovebaxon.github.io/REPO/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 5 59 32 32 59 5 32Z' fill='none' stroke='%2300ff66' stroke-width='6'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%2300ff66'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <video id="fondo-video" src="fondo.mp4" autoplay muted loop playsinline></video>
+  <div class="tinte"></div>
+  <canvas id="particulas"></canvas>
+
+  <main class="ventana">
+    <div class="barra">
+      <span class="punto activo"></span>
+      <span class="punto"></span>
+      <span class="punto"></span>
+      <span class="ruta">~/PROFILES/ilovebaxon.TXT</span>
+      <span class="online">ONLINE</span>
+    </div>
+
+    <div class="contenido">
+
+      <div class="principal">
+        <div class="izquierda">
+          <div class="encabezado">
+            <div class="avatar"></div>
+            <h1>ilovebaxon</h1>
+          </div>
+        </div>
+      </div>
+
+      <p class="desc">You call it impossible because you're to weak to try.</p>
+
+
+      <div class="reproductor" id="reproductor">
+        <button class="play" id="play" title="Reproducir / pausar">&#9654;</button>
+
+        <div class="info">
+          <div class="titulo-cancion">
+            <b>Teeth(interlude)</b>
+            <small>xxxtentacion</small>
+          </div>
+          <div class="progreso-fila">
+            <span id="tiempo-actual">0:00</span>
+            <input type="range" id="progreso" min="0" max="100" step="0.1" value="0">
+            <span id="tiempo-total">2:29</span>
+          </div>
+        </div>
+
+        <div class="ecualizador"><i></i><i></i><i></i><i></i><i></i></div>
+
+        <div class="volumen">
+          <button id="mute" title="Silenciar">&#128266;</button>
+          <input type="range" id="volumen" min="0" max="1" step="0.01" value="0.25">
+        </div>
+      </div>
+
+      <div class="pie">
+        <a class="enlace" href="https://discord.gg/dwmt" target="_blank" rel="noopener">
+          <img src="https://cdn.simpleicons.org/discord/white" alt="">
+          <span><b>Discord</b><small>/dwmt</small></span>
+        </a>
+
+        <div class="estado" id="discord-estado">
+          <i class="punto-estado"></i>
+          <span><b id="discord-texto">---</b><small id="discord-detalle">---</small></span>
+        </div>
+
+        <div class="visitas">VISITS: <b id="visitas">----</b></div>
+      </div>
+    </div>
+  </main>
+
+  <audio id="musica" src="musica.mp3" loop></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
